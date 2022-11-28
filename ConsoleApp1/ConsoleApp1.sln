@@ -1,25 +1,26 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33110.190
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{5606294A-B5D4-4A8E-842A-C3E0903164FD}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5606294A-B5D4-4A8E-842A-C3E0903164FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5606294A-B5D4-4A8E-842A-C3E0903164FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5606294A-B5D4-4A8E-842A-C3E0903164FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5606294A-B5D4-4A8E-842A-C3E0903164FD}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7F386536-D322-4612-B20B-F07AAE299E31}
-	EndGlobalSection
-EndGlobal
+class Student
+{
+    public string name;
+    public int weight;
+
+    public Student(string modelName , int modelWeight)
+    {
+        name = modelName;
+        weight = modelWeight;
+    }
+    static void Main(string[] args)
+    {
+        Student student1 = new Student("Ta", 69);
+        Student student2 = new Student("palm", 60);
+        Student student3 = new Student("Top", 79);
+        Student student4 = new Student("haroon", 60);
+        Student student5 = new Student("Ter", 63);
+        int[] weightList = { student1.weight, student2.weight, student3.weight, student4.weight, student5.weight };
+        int max = weightList.Max();
+        int min = weightList.Min();
+        Console.WriteLine("แสดงค่าเฉลี่ยน้ำหนักของนักศึกษาทั้งหมด" + (student1.weight + student2.weight + student3.weight + student4.weight + student5.weight) / 5);
+        Console.WriteLine("แสดงชื่อและน้ำหนักของคนที่มีน้ำหนักมากที่สุด" + max);
+        Console.WriteLine("แสดงชื่อและน้ำหนักของคนที่มีน้ำหนักน้อยที่สุด" + min);
+        Console.WriteLine("นายพิริยกร พันธุ์พานิชย์ 653450098-0");
+    }
+}
